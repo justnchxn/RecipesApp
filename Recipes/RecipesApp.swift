@@ -1,17 +1,12 @@
-//
-//  RecipesApp.swift
-//  Recipes
-//
-//  Created by Justin Chan on 14/08/2025.
-//
-
 import SwiftUI
 
 @main
 struct RecipesApp: App {
+    @StateObject private var store = ShoppingListStore()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(store)
         }
     }
 }
